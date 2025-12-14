@@ -1,0 +1,293 @@
+{
+	"info": {
+		"_postman_id": "b3ab74d3-5ac6-4de7-9ef9-535ccaa88979",
+		"name": "Emircan Bartan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50713840",
+		"_collection_link": "https://emirbrtn-3728286.postman.co/workspace/emirbrtn's-Workspace~a951c472-e100-4b2a-8e64-4775cb962bd7/collection/50713840-b3ab74d3-5ac6-4de7-9ef9-535ccaa88979?action=share&source=collection_link&creator=50713840"
+	},
+	"item": [
+		{
+			"name": "AddVenue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Final Test Mekani\",\r\n  \"address\": \"SDÜ Kampus\",\r\n  \"foodanddrink\": \"Cay, Tost\",\r\n  \"lat\": 37.8,\r\n  \"long\": 30.5,\r\n  \"days1\": \"Pzt-Cum\",\r\n  \"open1\": \"09:00\",\r\n  \"close1\": \"17:00\",\r\n  \"isClosed1\": false,\r\n  \"days2\": \"Cmt-Paz\",\r\n  \"open2\": \"10:00\",\r\n  \"close2\": \"16:00\",\r\n  \"isClosed2\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mekanbul-backend-olive.vercel.app/api/venues",
+					"protocol": "https",
+					"host": [
+						"mekanbul-backend-olive",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListNearbyVenues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mekanbul-backend-olive.vercel.app/api/venues?lat=37.8&long=30.5",
+					"protocol": "https",
+					"host": [
+						"mekanbul-backend-olive",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "37.8"
+						},
+						{
+							"key": "long",
+							"value": "30.5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mekanbul-backend-olive.vercel.app/api/venues/693ed4f64aa0291d7ec4e071",
+					"protocol": "https",
+					"host": [
+						"mekanbul-backend-olive",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"693ed4f64aa0291d7ec4e071"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateVenue",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Final Test (Guncellendi)\",\r\n  \"address\": \"SDÜ Kampus\",\r\n  \"foodanddrink\": \"Cay, Tost\",\r\n  \"lat\": 37.8,\r\n  \"long\": 30.5,\r\n  \"days1\": \"Pzt-Cum\",\r\n  \"open1\": \"09:00\",\r\n  \"close1\": \"17:00\",\r\n  \"isClosed1\": false,\r\n  \"days2\": \"Cmt-Paz\",\r\n  \"open2\": \"10:00\",\r\n  \"close2\": \"16:00\",\r\n  \"isClosed2\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mekanbul-backend-olive.vercel.app/api/venues/693ed4f64aa0291d7ec4e071",
+					"protocol": "https",
+					"host": [
+						"mekanbul-backend-olive",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"693ed4f64aa0291d7ec4e071"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddComment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\": \"Ogrenci\",\r\n    \"rating\": 5,\r\n    \"text\": \"Ders çalışmak için süper.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mekanbul-backend-olive.vercel.app/api/venues/693ed4f64aa0291d7ec4e071/comments",
+					"protocol": "https",
+					"host": [
+						"mekanbul-backend-olive",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"693ed4f64aa0291d7ec4e071",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetComment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://mekanbul-backend-olive.vercel.app/api/venues/693ed4f64aa0291d7ec4e071/comments/693ed9b84aa0291d7ec4e088",
+					"protocol": "https",
+					"host": [
+						"mekanbul-backend-olive",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"693ed4f64aa0291d7ec4e071",
+						"comments",
+						"693ed9b84aa0291d7ec4e088"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateComment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\": \"Ogrenci\",\r\n    \"rating\": 1,\r\n    \"text\": \"İnternet koptu, beğenmedim.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mekanbul-backend-olive.vercel.app/api/venues/693ed4f64aa0291d7ec4e071/comments/693ed9b84aa0291d7ec4e088",
+					"protocol": "https",
+					"host": [
+						"mekanbul-backend-olive",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"693ed4f64aa0291d7ec4e071",
+						"comments",
+						"693ed9b84aa0291d7ec4e088"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteComment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://mekanbul-backend-olive.vercel.app/api/venues/693ed4f64aa0291d7ec4e071/comments/693ed9b84aa0291d7ec4e088",
+					"protocol": "https",
+					"host": [
+						"mekanbul-backend-olive",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"693ed4f64aa0291d7ec4e071",
+						"comments",
+						"693ed9b84aa0291d7ec4e088"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteVenue",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://mekanbul-backend-olive.vercel.app/api/venues/693ed4f64aa0291d7ec4e071",
+					"protocol": "https",
+					"host": [
+						"mekanbul-backend-olive",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues",
+						"693ed4f64aa0291d7ec4e071"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddVenue",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Final Test Mekani\",\r\n  \"address\": \"SDÜ Kampus\",\r\n  \"foodanddrink\": \"Cay, Tost\",\r\n  \"lat\": 37.8,\r\n  \"long\": 30.5,\r\n  \"days1\": \"Pzt-Cum\",\r\n  \"open1\": \"09:00\",\r\n  \"close1\": \"17:00\",\r\n  \"isClosed1\": false,\r\n  \"days2\": \"Cmt-Paz\",\r\n  \"open2\": \"10:00\",\r\n  \"close2\": \"16:00\",\r\n  \"isClosed2\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://mekanbul-backend-olive.vercel.app/api/venues",
+					"protocol": "https",
+					"host": [
+						"mekanbul-backend-olive",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"venues"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
