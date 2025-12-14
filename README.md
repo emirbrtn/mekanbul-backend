@@ -1,11 +1,30 @@
 # Mekanbul Backend Projesi
 
 **Geliştirici:** Emircan Bartan
+
 **Canlı Demo:** https://mekanbul-backend-olive.vercel.app/
 
 Bu proje Node.js, Express ve MongoDB kullanılarak geliştirilmiş, Vercel üzerinde çalışan bir REST API uygulamasıdır.
 
-## API Test Ekran Görüntüleri (Kanıtlar)
+## 📍 API Uç Noktaları (Endpoints)
+
+Projede kullanılan tüm API adresleri ve açıklamaları aşağıdadır:
+
+| Metot | Uç Nokta (Endpoint) | Açıklama |
+| :--- | :--- | :--- |
+| **GET** | `/api/venues?lat={lat}&long={long}` | Konuma göre mekanları listeler. |
+| **POST** | `/api/venues` | Yeni bir mekan ekler. |
+| **GET** | `/api/venues/:venueid` | Belirli bir mekanı getirir. |
+| **PUT** | `/api/venues/:venueid` | Belirli bir mekanı günceller. |
+| **DELETE** | `/api/venues/:venueid` | Belirli bir mekanı siler. |
+| **POST** | `/api/venues/:venueid/comments` | Mekana yeni yorum ekler. |
+| **GET** | `/api/venues/:venueid/comments/:commentid` | Belirli bir yorumu getirir. |
+| **PUT** | `/api/venues/:venueid/comments/:commentid` | Belirli bir yorumu günceller. |
+| **DELETE** | `/api/venues/:venueid/comments/:commentid` | Belirli bir yorumu siler. |
+
+---
+
+## 📸 API Test Ekran Görüntüleri (Kanıtlar)
 
 Aşağıda Postman kullanılarak yapılan tüm API testlerinin başarılı sonuçları yer almaktadır.
 
@@ -25,8 +44,6 @@ Aşağıda Postman kullanılarak yapılan tüm API testlerinin başarılı sonu�
 
 **Mekan Silme (DELETE):**
 ![Mekan Silme](tests/DeleteVenue.png)
-
----
 
 ### 2. Yorum (Comment) İşlemleri
 
